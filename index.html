@@ -164,6 +164,18 @@
       transform: scale(1.2);
     }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #111;
+    }
+
+
     .about-section {
       background-color: #6f271a;
       padding: 0px 0px;
@@ -185,6 +197,7 @@
       flex: 1 1 300px;
       text-align: center;
     }
+
 
     .about-image img {
       width: 500px;
@@ -212,7 +225,63 @@
     }
 
 
-    .highlight2 {
+    /* Responsive: Stack image above text on smaller screens */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+      }
+
+      .about-text h2 {
+        font-size: 32px;
+      }
+
+      .about-text p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .about-section {
+        padding: 30px 10px;
+      }
+
+      .about-text h2 {
+        font-size: 26px;
+      }
+
+      .about-text p {
+        font-size: 14px;
+      }
+    }
+    .about-image
+    {
+      flex: 1 1 200px;
+      
+      margin-right: 50px;
+      padding: 0px;
+    }
+    .about-image img {
+      width: 500px;
+      max-width: 500px;
+      margin-top: 10px;
+      height: auto;
+      border-radius: 10px;
+    }
+    * {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.highlight2 {
       color: #f4f4f4;
       font-weight: bold;
     }
@@ -358,150 +427,150 @@
     }
 
 
-    /* New Responsive Styles for Mobile */
-    @media (max-width: 768px) {
-      .navbar {
-        padding: 10px 20px;
-        flex-direction: column;
-        height: auto;
-      }
+   /* New Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 
-      .nav-links {
-        gap: 15px;
-        padding-top: 10px;
-      }
+  .navbar {
+    padding: 10px 20px;
+    flex-direction: column;
+    height: auto;
+  }
 
-      .nav-links a {
-        font-size: 20px;
-      }
+  .nav-links {
+    gap: 15px;
+    padding-top: 10px;
+  }
 
-      .hero {
-        flex-direction: column;
-        padding: 20px;
-        min-height: auto;
-        text-align: center;
-        gap: 30px;
-      }
+  .nav-links a {
+    font-size: 20px;
+  }
 
-      .hero-content {
-        padding-left: 0;
-        margin-left: 0;
-        margin-top: 20px;
-        text-align: center;
-        min-height: auto;
-      }
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    min-height: auto;
+    text-align: center;
+    gap: 30px;
+  }
 
-      .hero-content h1 {
-        font-size: 40px;
-      }
+  .hero-content {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+    min-height: auto;
+  }
 
-      .hero-content h2 {
-        font-size: 24px;
-      }
+  .hero-content h1 {
+    font-size: 40px;
+  }
 
-      .tt {
-        font-size: 20px;
-      }
+  .hero-content h2 {
+    font-size: 24px;
+  }
 
-      .hero-image-wrapper {
-        flex-direction: column-reverse;
-        gap: 20px;
-        padding-right: 0;
-        margin-right: 0;
-      }
+  .tt {
+    font-size: 20px;
+  }
 
-      .hero-image img {
-        height: auto;
-      }
+  .hero-image-wrapper {
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding-right: 0;
+    margin-right: 0;
+  }
 
-      .social-icons-vertical {
-        flex-direction: row;
-        margin-right: 0;
-      }
+  .hero-image img {
+    height: auto;
+  }
 
-      .social-icons-vertical a {
-        font-size: 30px;
-      }
+  .social-icons-vertical {
+    flex-direction: row;
+    margin-right: 0;
+  }
 
-      .about-section {
+  .social-icons-vertical a {
+    font-size: 30px;
+  }
 
-        background-color: #6f271a;
+  .about-section {
+    background-color: #6f271a;
+    padding: 40px 15px;
+  }
 
-      }
+  .about-container {
+    display: flex;
+    flex-direction: column; /* stack image above text */
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
 
-      .about-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 40px;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 40px;
+  .about-image {
+    text-align: center;
+  }
 
-      }
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+  }
 
-      .about-text {
-        flex: 1 1 400px;
-        max-width: 600px;
-        color: white;
-      }
+  .about-text {
+    color: white;
+    text-align: center;
+    max-width: 600px;
+  }
 
-      .about-text h2 {
-        font-size: 48px;
-        margin-bottom: 20px;
-        color: white;
-      }
+  .about-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+  }
 
-      .about-text p {
-        font-size: 20px;
-        color: #ecc68e;
-        line-height: 1.6;
-      }
+  .about-text p {
+    font-size: 16px;
+    color: #ecc68e;
+    line-height: 1.6;
+  }
 
-      .about-image {
-        flex: 1 1 300px;
-        text-align: center;
-      }
+  .highlight2 {
+    color: #f4f4f4;
+    font-weight: bold;
+  }
 
-      .about-image img {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        border-radius: 10px;
-      }
+  .projects-section {
+    padding: 60px 20px;
+  }
 
+  .projects-section h2 {
+    font-size: 40px;
+  }
 
+  .projects-section > p {
+    font-size: 18px;
+  }
 
-      .highlight2 {
-        color: #f4f4f4;
-        font-weight: bold;
-      }
+  .contact-section {
+    padding: 60px 20px;
+    padding-top: 80px;
+  }
 
-      .projects-section {
-        padding: 60px 20px;
-      }
+  .contact-section h2 {
+    font-size: 36px;
+  }
+}
 
-      .projects-section h2 {
-        font-size: 40px;
-      }
-
-      .projects-section>p {
-        font-size: 18px;
-      }
-
-      .contact-section {
-        padding: 60px 20px;
-        padding-top: 80px;
-      }
-
-      .contact-section h2 {
-        font-size: 36px;
-      }
-    }
   </style>
+  
+
 </head>
 
 <body>
